@@ -1,0 +1,45 @@
+$font_color: #212121;
+$font_size: 16px;
+$line_height: percentage(20px / $font_size);
+$font_color_wt:#fff;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@300&display=swap');
+
+.header {position: relative;}
+.gnb__section {position:absolute;width:100%;z-index: 10;text-align: center;
+    transition: all 0.3s;
+    h1 {
+        color:$font_color_wt;
+        font-size: 50px;
+        position: absolute;
+        left:20px;
+        top:10px;
+        font-family: 'Nanum Pen Script', cursive;
+        font-weight: 300;
+    }
+    .gnb__list {
+        margin-top: 25px;
+        text-align: right;
+    }
+    li {display: inline-block;
+        position: relative;
+        padding:0 20px;
+        a {display:block;font-size: $font_size;color:$font_color_wt;text-align: center;padding:10px 0;}
+        ul {display:none;}
+    }
+    :hover {
+       .services-submenu {display: block;}
+    }
+    
+}
+.gnb__section.fixed {position:fixed;
+    background-color: #fff;
+    padding-bottom:15px;
+    h1 {
+        font-size:30px;
+        color: #212121;
+    }
+    .gnb__list {
+        margin-top:10px;
+        a {color: #212121;}
+    }
+}

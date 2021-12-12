@@ -1,0 +1,28 @@
+$font_color: #212121;
+$font_size: 16px;
+$line_height: percentage(20px / $font_size);
+$font_color_wt:#fff;
+
+.slider__wrap {position: relative;
+    .slide__text {
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        color:$font_color_wt;
+        font-size:38px;
+        line-height: 60px;
+        z-index: 10;
+    }
+}
+.swiper-slide.swiper-slide-active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    z-index: 11;
+    background-color: rgba(0,0,0,0.6);
+}
